@@ -16,9 +16,11 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         TextView sportsTitle = findViewById(R.id.titleDetail);
+        TextView mDetails = findViewById(R.id.subTitleDetail);
         ImageView sportsImage = findViewById(R.id.sportsImageDetail);
 
         sportsTitle.setText(getIntent().getStringExtra("title"));
+        mDetails.setText(getIntent().getStringExtra("info"));
         Glide.with(this).load(getIntent().getIntExtra("img_src",0)).into(sportsImage);
     }
 }
