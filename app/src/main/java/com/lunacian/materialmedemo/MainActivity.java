@@ -33,21 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (savedInstanceState!= null){
-            // Initialize the RecyclerView.
-            mRecyclerView = findViewById(R.id.recyclerView);
 
-            // Set the Layout Manager.
-            mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-            // Initialize the ArrayList that will contain the data.
-            mSportsData = new ArrayList<>();
-
-            // Initialize the adapter and set it to the RecyclerView.
-            mAdapter = new SportsAdapter(this, mSportsData);
-            mRecyclerView.setAdapter(mAdapter);
-
-            // Get the data.
-            initializeData();
         }
         else{
             initSample();
